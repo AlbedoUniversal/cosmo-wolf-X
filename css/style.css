@@ -91,34 +91,48 @@ h3 {
 #game-wrap[data-bx="0"][data-by="1"] .basket {
   width: 82px;
   height: 78px;
-  background: transparent url("../img/basket/basket-p-0-1.png") center center
-    no-repeat;
+  /* background: transparent url("../img/basket/basket-p-0-1.png") center center
+    no-repeat; */
+  background: none;
   top: 158px;
-  left: 126px;
+  left: 80px;
 }
+
+/* //rt */
 #game-wrap[data-bx="1"][data-by="1"] .basket {
   width: 82px;
   height: 78px;
-  background: transparent url("../img/basket/basket-p-1-1.png") center center
-    no-repeat;
-  top: 165px;
-  right: 123px;
+  /* background: transparent url("../img/basket/basket-p-1-1.png") center center
+    no-repeat; */
+  background: none;
+
+  top: 160px;
+  right: 100px;
 }
 #game-wrap[data-bx="0"][data-by="0"] .basket {
   width: 85px;
   height: 65px;
-  background: transparent url("../img/basket/basket-p-0-0.png") center center
-    no-repeat;
-  left: 124px;
-  bottom: 50px;
+  /* background: transparent url("../img/basket/basket-p-0-0.png") center center
+    no-repeat; */
+  background: none;
+
+  left: 80px;
+  bottom: 54px;
 }
 #game-wrap[data-bx="1"][data-by="0"] .basket {
   width: 85px;
   height: 65px;
-  background: transparent url("../img/basket/basket-p-1-0.png") center center
-    no-repeat;
-  right: 126px;
-  bottom: 44px;
+  /* background: transparent url("../img/basket/basket-p-1-0.png") center center
+    no-repeat; */
+  background: none;
+
+  right: 76px;
+  bottom: 54px;
+}
+
+.basket-plasma {
+  width: 40px;
+  height: 40px;
 }
 
 /*
@@ -138,6 +152,25 @@ h3 {
     no-repeat; */
   background: transparent url("../img/wolf/left.png") center center no-repeat;
 }
+
+#game-wrap[data-bx="0"][data-by="0"] .wolf {
+  width: 164px;
+  height: 152px;
+  top: 164px;
+  left: 179px;
+  /* background: transparent url("../img/wolf/wolf-p-0.png") center center
+    no-repeat; */
+  background: transparent url("../img/wolf/leftr.png") center center no-repeat;
+}
+#game-wrap[data-bx="1"][data-by="0"] .wolf {
+  width: 159px;
+  height: 146px;
+  top: 166px;
+  right: 186px;
+  /* background: transparent url("../img/wolf/wolf-p-1.png") center center
+    no-repeat; */
+  background: transparent url("../img/wolf/rightr.png") center center no-repeat;
+}
 #game-wrap[data-bx="1"] .wolf {
   width: 159px;
   height: 146px;
@@ -154,7 +187,7 @@ h3 {
 #game-wrap .egg {
   width: 15px;
   height: 15px;
-  background: transparent url("../img/egg/egg.png") center center no-repeat;
+  background-image: url("../img/egg/egg.png");
   position: absolute;
 }
 #game-wrap[data-egg-0="0"] .egg.e-0,
@@ -467,6 +500,10 @@ h3 {
   display: none;
   overflow: hidden;
 }
+.egg-img {
+  width: 15px;
+  height: 15px;
+}
 #message > div {
   margin-top: 134px;
   padding: 5px 0 15px;
@@ -495,7 +532,7 @@ h3 {
   width: 80px;
   height: 80px;
   border-radius: 80px;
-  background: transparent url("../img/nav-button.png") center center no-repeat;
+  /* background: transparent url("../img/nav-button.png") center center no-repeat; */
   color: #b14426;
   font-size: 16px;
   line-height: 32px;
@@ -504,7 +541,15 @@ h3 {
   position: absolute;
   display: block;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+#controls a .nav-img {
+  width: 110px;
+  height: 80px;
+}
+
 #controls a[data-x="0"] {
   left: -80px;
 }
