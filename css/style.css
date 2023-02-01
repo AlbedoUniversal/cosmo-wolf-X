@@ -78,6 +78,7 @@ h3 {
   position: relative;
   border-radius: 27px;
   border: 10px solid #000000;
+  background-size: cover;
 }
 
 /*
@@ -144,23 +145,25 @@ h3 {
   position: absolute;
 }
 #game-wrap[data-bx="0"] .wolf {
-  width: 159px;
+  width: 252px;
   height: 152px;
   top: 164px;
-  left: 179px;
+  left: 140px;
   /* background: transparent url("../img/wolf/wolf-p-0.png") center center
     no-repeat; */
   background: transparent url("../img/wolf/left.png") center center no-repeat;
+  background-size: cover;
 }
 
 #game-wrap[data-bx="0"][data-by="0"] .wolf {
-  width: 164px;
+  width: 262px;
   height: 152px;
   top: 164px;
-  left: 179px;
+  left: 140px;
   /* background: transparent url("../img/wolf/wolf-p-0.png") center center
     no-repeat; */
   background: transparent url("../img/wolf/leftr.png") center center no-repeat;
+  background-size: cover;
 }
 #game-wrap[data-bx="1"][data-by="0"] .wolf {
   width: 159px;
@@ -170,6 +173,7 @@ h3 {
   /* background: transparent url("../img/wolf/wolf-p-1.png") center center
     no-repeat; */
   background: transparent url("../img/wolf/rightr.png") center center no-repeat;
+  background-size: cover;
 }
 #game-wrap[data-bx="1"] .wolf {
   width: 159px;
