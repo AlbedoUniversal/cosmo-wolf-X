@@ -189,16 +189,22 @@ h3 {
    * Egg
    */
 #game-wrap .egg {
-  width: 15px;
-  height: 15px;
-  background-image: url("../img/egg/egg.png");
+  /* width: 15px;
+  height: 15px; */
+	background-size: cover;
   position: absolute;
+	/* border: 3px solid red; */
 }
 #game-wrap[data-egg-0="0"] .egg.e-0,
 #game-wrap[data-egg-1="0"] .egg.e-1,
 #game-wrap[data-egg-2="0"] .egg.e-2,
 #game-wrap[data-egg-3="0"] .egg.e-3 {
   display: none;
+}
+
+#game-wrap[data-egg-0="0"] .egg {
+	/* width: 50px;
+  height: 50px; */
 }
 
 /* Egg bottom-left */
@@ -386,8 +392,12 @@ h3 {
 
 #game-wrap #score {
   position: absolute;
-  top: 48px;
-  left: 326px;
+  top: 40px;
+  left: 320px;
+	border-radius: 8px;
+	background-color: #ffffffa8;
+	border: 2px solid;
+	transform: skewY(0deg);
 }
 #game-wrap #score ul {
   margin: 0;
@@ -397,9 +407,9 @@ h3 {
 }
 #game-wrap #score ul > li {
   width: 31px;
-  height: 47px;
-  margin: 0 0 0 -2px;
-  background: transparent url("../img/score/num-bg.png");
+  height: 45px;
+  margin: 0 0 0 -6px;
+  /* background: transparent url("../img/score/num-bg.png"); */
   display: inline-block;
   vertical-align: top;
 }
@@ -448,20 +458,20 @@ h3 {
   height: 32px;
   background: transparent url("../img/loss/loss.png") left top no-repeat;
   position: absolute;
-  top: 114px;
-  left: 326px;
+  top: 97px;
+  left: 316px;
 }
 #game-wrap[data-loss="0"] #loss {
-  width: 0;
+  width: 120px;
 }
 #game-wrap[data-loss="1"] #loss {
-  width: 40px;
-}
-#game-wrap[data-loss="2"] #loss {
   width: 80px;
 }
+#game-wrap[data-loss="2"] #loss {
+  width: 40px;
+}
 #game-wrap[data-loss="3"] #loss {
-  width: 120px;
+  width: 0px;
 }
 
 #game-wrap .more-info {
@@ -471,20 +481,7 @@ h3 {
   top: 0;
   right: -120px;
 }
-#game-wrap .more-info a.source-code,
-#game-wrap .more-info .how-to-play {
-  width: 100%;
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #9a998e;
-  font-size: 18px;
-  font-weight: normal;
-  text-decoration: none;
-  display: block;
-}
-#game-wrap .more-info a.source-code {
-  padding-bottom: 26px;
-  background: transparent url("../img/github-logo.png") center bottom no-repeat;
-}
+
 #game-wrap .more-info a.restart-game {
   padding-left: 20px;
   background: transparent url("../img/restart-icon.png") left center no-repeat;
@@ -505,8 +502,8 @@ h3 {
   overflow: hidden;
 }
 .egg-img {
-  width: 15px;
-  height: 15px;
+  /* width: 15px;
+  height: 15px; */
 }
 #message > div {
   margin-top: 134px;
@@ -573,10 +570,7 @@ body.is-mobile {
 body.is-mobile .page a.logo {
   margin-top: 5%;
 }
-body.is-mobile .more-info a.source-code {
-  padding: 0 90px 0 0;
-  background-position: right top !important;
-}
+
 body.is-mobile #game-wrap .more-info .how-to-play {
   display: none;
 }
@@ -598,13 +592,7 @@ body:not(.is-mobile) .more-info a.restart-game {
     display: flex;
     justify-content: center;
   }
-  #game-wrap .more-info a.source-code,
-  #game-wrap .more-info .how-to-play {
-    width: auto;
-  }
-  #game-wrap .more-info a.source-code {
-    float: left;
-  }
+
   #game-wrap .more-info .how-to-play {
     float: right;
     position: relative;
@@ -622,10 +610,7 @@ body:not(.is-mobile) .more-info a.restart-game {
     font-size: 36px;
     line-height: 2em;
   }
-  #game-wrap .more-info a.source-code {
-    padding: 0 90px 0 0;
-    background-position: right top;
-  }
+
   #game-wrap .more-info {
     bottom: -40px;
   }
