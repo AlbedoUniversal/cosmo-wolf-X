@@ -1,10 +1,8 @@
-
-
-var GameManager = function() {
+var GameManager = function () {
   this.init();
   this.setup();
   this.start();
-}
+};
 
 // Initial game settings
 GameManager.prototype.init = function () {
@@ -17,7 +15,7 @@ GameManager.prototype.init = function () {
   this.level = 1;
   this.speed = 800;
   // this.maxSpeed = 200;
-  this.interval = this.speed*2.5;
+  this.interval = this.speed * 2.5;
   this.point = 2;
 
   this.chickens = {};
@@ -47,12 +45,11 @@ GameManager.prototype.setup = function () {
   }
 };
 
-GameManager.prototype.isMobile = function() {
+GameManager.prototype.isMobile = function () {
   try {
     document.createEvent("TouchEvent");
     return true;
-  }
-  catch(e) {
+  } catch (e) {
     return false;
   }
 };
@@ -61,20 +58,20 @@ GameManager.prototype.move = function (data) {
   var position = { x: this.basket.x, y: this.basket.y };
 
   switch (data.type) {
-    case 'arrow':
+    case "arrow":
       // 0: up, 1: right, 2: down, 3: left, 4: R - restart
-      if(data.key%2 == 0) {
-        position.y = (data.key > 0) ? 0 : 1;
+      if (data.key % 2 == 0) {
+        position.y = data.key > 0 ? 0 : 1;
       } else {
-        position.x = (data.key > 2) ? 0 : 1;
+        position.x = data.key > 2 ? 0 : 1;
       }
       break;
-    case 'button':
+    case "button":
       position.x = data.x;
       position.y = data.y;
       break;
-    case 'common':
-      if (data.key == 'restart') {
+    case "common":
+      if (data.key == "restart") {
         this.reStart();
         return false;
       }
@@ -82,7 +79,7 @@ GameManager.prototype.move = function (data) {
   }
 
   this.basket.updatePosition(position, this.api.bind(this));
-}
+};
 
 GameManager.prototype.start = function () {
   this.runGear();
@@ -94,7 +91,7 @@ GameManager.prototype.reStart = function () {
 
 GameManager.prototype.runGear = function () {
   var self = this;
-  this.gameTimer = setInterval(function() {
+  this.gameTimer = setInterval(function () {
     var chicken = self.findAvailableChicken();
     if (chicken >= 0 && !this.over) {
       self.runEgg(chicken);
@@ -116,23 +113,26 @@ GameManager.prototype.upLevel = function () {
   this.level++;
 
   switch (true) {
-    case (this.level < 8):
+    case this.level < 8:
       this.speed += -50;
       break;
-    case (this.level > 19):
+    case this.level > 19:
       this.speed += 0;
       break;
     default:
       this.speed += -25;
       break;
   }
-  this.interval = this.speed*2.5;
+  this.interval = this.speed * 2.5;
 
   this.suspendGear();
 };
 
 GameManager.prototype.updateScore = function (data) {
-  if (this.grid.list[data.egg].x == this.basket.x && this.grid.list[data.egg].y == this.basket.y) {
+  if (
+    this.grid.list[data.egg].x == this.basket.x &&
+    this.grid.list[data.egg].y == this.basket.y
+  ) {
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
 
@@ -153,7 +153,7 @@ GameManager.prototype.updateScore = function (data) {
   }
 };
 
-GameManager.prototype.findAvailableChicken = function() {
+GameManager.prototype.findAvailableChicken = function () {
   var avail = this.grid.avail.diff(this.grid.hold);
 
   if (!avail) {
@@ -161,52 +161,56 @@ GameManager.prototype.findAvailableChicken = function() {
   }
 
   var chicken = avail.randomElement();
-  this.api('onHoldChicken', { egg: chicken });
+  this.api("onHoldChicken", { egg: chicken });
 
   return chicken;
 };
 
-GameManager.prototype.runEgg = function(chicken) {
+GameManager.prototype.runEgg = function (chicken) {
   this.chickens[chicken].egg.run(this.speed, this.api.bind(this));
 };
 
-GameManager.prototype.gameOver = function() {
+GameManager.prototype.gameOver = function () {
   this.haltGear();
   this.HTMLredraw.gameOver();
 };
 
-GameManager.prototype.gameWin = function() {
+GameManager.prototype.gameWin = function () {
   this.haltGear();
   this.HTMLredraw.gameWin();
 };
 
-GameManager.prototype.api = function(method, data) {
+GameManager.prototype.api = function (method, data) {
   switch (method) {
-    case 'updateScore':
+    case "updateScore":
       this.updateScore(data);
       break;
-    case 'onHoldChicken':
+    case "onHoldChicken":
       this.grid.onHold(data.egg);
       break;
-    case 'unHoldChicken':
+    case "unHoldChicken":
       this.grid.unHold(data.egg);
       break;
-    case 'updateEggPosition':
+    case "updateEggPosition":
       this.HTMLredraw.updateEggPosition(data);
       break;
-    case 'updateBasketPosition':
+    case "updateBasketPosition":
       this.HTMLredraw.updateBasketPosition(data);
       break;
   }
 };
 
-GameManager.prototype.touchscreenModification = function() {
-  var buttons = document.querySelector('#controls').getElementsByTagName('a');
+GameManager.prototype.touchscreenModification = function () {
+  var buttons = document.querySelector("#controls").getElementsByTagName("a");
 
   var self = this;
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function() {
-      var data = { x: this.getAttribute('data-x'), y: this.getAttribute('data-y'), type: 'button' };
+    buttons[i].onclick = function () {
+      var data = {
+        x: this.getAttribute("data-x"),
+        y: this.getAttribute("data-y"),
+        type: "button",
+      };
       self.move(data);
       return false;
     };
