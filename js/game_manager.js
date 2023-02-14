@@ -1,7 +1,7 @@
 var GameManager = function () {
   this.init();
   this.setup();
-  this.start();
+  // this.start();
 };
 
 // Initial game settings
@@ -28,6 +28,17 @@ GameManager.prototype.init = function () {
 
 // Set up the game
 GameManager.prototype.setup = function () {
+
+  const btnStart = document.querySelector('.btn-start');
+  const btnStartWrap = document.querySelector('.btn-start-wrapper');
+
+  btnStart.onclick = () => {
+    btnStartWrap.hide();
+    console.log(this)
+    this.start();
+    
+  }
+
   this.keyboard = new KeyboardInputManager();
   this.keyboard.on("move", this.move.bind(this));
 
@@ -218,3 +229,4 @@ GameManager.prototype.touchscreenModification = function () {
 
   this.HTMLredraw.mobileVersion();
 };
+

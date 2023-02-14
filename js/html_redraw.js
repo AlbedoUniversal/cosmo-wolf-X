@@ -72,3 +72,4 @@ HTMLredraw.prototype.getMessage = function (message) {
 HTMLredraw.prototype.mobileVersion = function () {
   this.bodyWrap.className = "is-mobile";
 };
+

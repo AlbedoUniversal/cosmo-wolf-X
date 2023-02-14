@@ -1,0 +1,62 @@
+/* Basket - blasterShot*/
+
+#game-wrap .basket {
+  width: 80px;
+  height: 80px;
+
+  position: absolute;
+
+}
+
+
+#game-wrap[data-bx="0"][data-by="1"] .basket {
+  width: 82px;
+  height: 78px;
+
+  background: none;
+
+  top: 158px;
+  left: 80px;
+
+}
+  
+/* //rt */
+#game-wrap[data-bx="1"][data-by="1"] .basket {
+  width: 82px;
+  height: 78px;
+
+  background: none;
+  
+  top: 168px;
+  right: 87px;
+
+}
+
+#game-wrap[data-bx="0"][data-by="0"] .basket {
+  width: 85px;
+  height: 65px;
+
+  background: none;
+  
+  left: 80px;
+  bottom: 54px;
+
+}
+
+#game-wrap[data-bx="1"][data-by="0"] .basket {
+  width: 85px;
+  height: 65px;
+    
+
+  background: none;
+  
+  right: 76px;
+  bottom: 54px;
+
+}
+  
+.basket-plasma {
+  width: 40px;
+  height: 40px;
+  
+}
