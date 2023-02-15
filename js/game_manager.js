@@ -29,6 +29,7 @@ GameManager.prototype.init = function () {
 // Set up the game
 GameManager.prototype.setup = function () {
 
+  // start game press button
   const btnStart = document.querySelector('.btn-start');
   const btnStartWrap = document.querySelector('.btn-start-wrapper');
 
@@ -37,6 +38,13 @@ GameManager.prototype.setup = function () {
     this.start();
     
   }
+  
+  // start game press enter
+  document.addEventListener( 'keyup', event => {
+    if( event.code === 'Enter' ) 
+    btnStartWrap.hide();
+    this.start();;
+  });
 
   this.keyboard = new KeyboardInputManager();
   this.keyboard.on("move", this.move.bind(this));
