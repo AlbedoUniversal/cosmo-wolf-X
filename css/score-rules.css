@@ -1,0 +1,351 @@
+/* score */
+
+#game-wrap #score {
+  position: absolute;
+
+  top: 16px;
+  left: 235px;
+
+}
+
+#game-wrap #score ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: inline-block;
+
+}
+
+#game-wrap #score ul > li {
+  width: 31px;
+  height: 45px;
+
+  margin: 0 0 0 -6px;
+  
+  display: inline-block;
+
+  vertical-align: top;
+
+}
+
+#game-wrap #score ul > li span {
+  width: 100%;
+  height: 100%;
+
+  background: transparent url("../img/score/nums.png");
+  background-position: 0px 0px;
+
+  text-indent: -200px;
+
+  display: block;
+  overflow: hidden;
+
+}
+
+
+#game-wrap #score ul > li.n-0 span {
+  background-position: 0px 0px;
+
+}
+
+#game-wrap #score ul > li.n-1 span {
+  background-position: -31px 0px;
+
+}
+
+#game-wrap #score ul > li.n-2 span {
+  background-position: -62px 0px;
+
+}
+
+#game-wrap #score ul > li.n-3 span {
+  background-position: -93px 0px;
+
+}
+
+#game-wrap #score ul > li.n-4 span {
+  background-position: -124px 0px;
+
+}
+
+#game-wrap #score ul > li.n-5 span {
+  background-position: -155px 0px;
+
+}
+
+  
+#game-wrap #score ul > li.n-6 span {
+  background-position: -186px 0px;
+
+}
+
+#game-wrap #score ul > li.n-7 span {
+  background-position: -217px 0px;
+
+}
+
+#game-wrap #score ul > li.n-8 span {
+  background-position: -248px 0px;
+
+}
+
+#game-wrap #score ul > li.n-9 span {
+  background-position: -279px 0px;
+
+}
+  
+#game-wrap #loss {
+  width: 120px;
+  height: 32px;
+
+  background: transparent url("../img/loss/loss.png") left top no-repeat;
+  background-size: cover;
+
+  position: absolute;
+
+  top: 70px;
+  left: 226px;
+
+}
+
+#game-wrap[data-loss="0"] #loss {
+  width: 120px;
+
+}
+
+#game-wrap[data-loss="1"] #loss {
+  width: 80px;
+
+}
+
+#game-wrap[data-loss="2"] #loss {
+  width: 40px;
+
+}
+
+#game-wrap[data-loss="3"] #loss {
+  width: 0px;
+
+}
+
+#game-wrap[data-loss="1"] {
+  animation-name: missedEgg;
+  animation-duration: 0.3s;
+}
+
+@keyframes missedEgg {
+  0% {
+    border-color: red;
+  }
+
+  20% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  40% {
+    border-color: red;
+  }
+  
+  60% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  80% {
+    border-color: red;
+  }
+
+  100% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+}
+
+#game-wrap[data-loss="2"] {
+  animation-name: missedEgg2;
+  animation-duration: 0.3s;
+}
+
+@keyframes missedEgg2 {
+  0% {
+    border-color: red;
+  }
+
+  20% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  40% {
+    border-color: red;
+  }
+  
+  60% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  80% {
+    border-color: red;
+  }
+
+  100% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+}
+
+#game-wrap[data-loss="3"] {
+  animation-name: missedEgg3;
+  animation-duration: 0.3s;
+}
+
+@keyframes missedEgg3 {
+  0% {
+    border-color: red;
+  }
+
+  20% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  40% {
+    border-color: red;
+  }
+  
+  60% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+  80% {
+    border-color: red;
+  }
+
+  100% {
+    border-color: var(--border-game-wrap-color);
+  }
+
+}
+
+
+.lost-egg {
+
+  opacity: 0;
+
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  width: 50px;
+  height: 50px;
+
+  background-image: url("../img/fragments.png");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#game-wrap[data-loss="1"] .lost-egg {
+  animation-name: flashes;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#game-wrap[data-loss="2"] .lost-egg {
+  animation-name: flashes2;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#game-wrap[data-loss="3"] .lost-egg-left {
+  animation-name: flashes3;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*.lost-egg-right {
+  display: none;
+  opacity: 0;
+
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  transform: scale(-1, 1);
+  background-image: url("../img/fragments.png");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#game-wrap[data-loss="1"] .lost-egg-right {
+  animation-name: flashes;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#game-wrap[data-loss="2"] .lost-egg-right {
+  animation-name: flashes2;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#game-wrap[data-loss="3"] .lost-egg-right {
+  animation-name: flashes3;
+  animation-duration: 0.3s;
+}
+
+@keyframes flashes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+*/

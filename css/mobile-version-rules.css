@@ -1,0 +1,140 @@
+/* Mobile devices */
+
+body.is-mobile .page a.logo {
+    margin-top: 5%;
+
+}
+  
+body.is-mobile #game-wrap .more-info .how-to-play {
+    display: none;
+
+}
+
+body.is-mobile .more-info a.restart-game {
+    float: right;
+}
+
+body:not(.is-mobile) #controls,
+body:not(.is-mobile) .more-info a.restart-game {
+    display: none;
+
+}
+
+.mobile-popup-orientation {
+    display: none;
+
+}
+
+@media (max-width: 1024px) {
+    #game-wrap .more-info .how-to-play {
+      float: right;
+      position: relative;
+
+    }
+
+}
+  
+@media only screen and (max-width: 768px) {
+    .page {
+      margin-bottom: 0;
+
+    }
+
+    .page a.logo {
+      margin: 4% 0 0 0;
+      padding-top: 0;
+
+      background: transparent;
+
+      font-size: 36px;
+      line-height: 2em;
+
+    }
+  
+    #game-wrap .more-info {
+      bottom: -40px;
+
+    }
+
+    #game-wrap .more-info .how-to-play {
+      display: none;
+
+    }
+
+    .footer {
+      margin-top: 20px;
+
+    }
+
+    .footer__text {
+      font-size: 40px;
+      color: #564e47;
+
+    }
+
+    #controls a[data-x="0"] {
+      left: -34px;
+
+    }
+
+    #controls a[data-x="1"] {
+      right: -34px;
+
+    }
+
+  }
+  
+
+  
+@media (max-width: 767px) and (orientation: portrait) {
+    .mobile-popup-orientation {
+      display: block;
+      position: fixed;
+      top: 0;
+
+      height: 100%;
+      width: 100vw;
+
+      background-color: black;
+    
+      z-index: 100;
+
+    }
+  
+    .text-mobile-alert {
+      writing-mode: vertical-rl;
+      letter-spacing: 2px;
+      font-size: 40px;
+      transform: rotate(180deg);
+
+      top: 25%;
+      left: 40%;
+
+      margin: 0;
+
+      position: relative;
+      
+      animation-name: shaking;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  
+    @keyframes shaking {
+
+      from {
+        transform: rotate(170deg);
+
+      }
+  
+      50% {
+        transform: rotate(190deg);
+
+      }
+  
+      to {
+        transform: rotate(170deg);
+        
+      }
+    }
+  }

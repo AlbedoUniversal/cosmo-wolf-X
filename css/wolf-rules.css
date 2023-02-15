@@ -1,0 +1,62 @@
+#game-wrap .wolf {
+    width: 50px;
+    height: 140px;
+
+    position: absolute;
+
+  }
+
+  /* shoots left top */
+  #game-wrap[data-bx="0"] .wolf {
+    width: 250px;
+    height: 150px;
+
+    top: 164px;
+    left: 140px;
+
+    background: transparent url("../img/wolf/wolfLeftTop.png") center center no-repeat;
+    background-size: cover;
+
+  }
+  
+  /* shoots left bottom */
+  #game-wrap[data-bx="0"][data-by="0"] .wolf {
+    width: 250px;
+    height: 150px;
+
+    top: 164px;
+    left: 140px;
+  
+    background: transparent url("../img/wolf/wolfLeftBottom.png") center center
+      no-repeat;
+    background-size: cover;
+
+  }
+  
+  /* shoots right bottom */
+  #game-wrap[data-bx="1"][data-by="0"] .wolf {
+    width: 250px;
+    height: 150px;
+
+    top: 166px;
+    right: 140px;
+
+    background: transparent url("../img/wolf/wolfRightBottom.png") center center
+      no-repeat;
+    background-size: cover;
+
+  }
+
+  /* shoots right top */
+  #game-wrap[data-bx="1"] .wolf {
+    width: 250px;
+    height: 150px;
+
+    top: 166px;
+    right: 140px;
+  
+    background: transparent url("../img/wolf/wolfRightTop.png") center center
+      no-repeat;
+    background-size: cover;
+    
+  }
