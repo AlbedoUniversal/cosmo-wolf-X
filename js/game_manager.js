@@ -41,9 +41,10 @@ GameManager.prototype.setup = function () {
   
   // start game press enter
   document.addEventListener( 'keyup', event => {
-    if( event.code === 'Enter' ) 
-    btnStartWrap.hide();
-    this.start();;
+    if( event.code === 'Enter' ) {
+      btnStartWrap.hide();
+      this.start();
+    }
   });
 
   this.keyboard = new KeyboardInputManager();
