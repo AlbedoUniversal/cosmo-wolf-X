@@ -11,10 +11,10 @@
     width: 250px;
     height: 150px;
 
-    top: 164px;
+    top: 159px;
     left: 140px;
 
-    background: transparent url("../img/wolf/wolfLeftTop.png") center center no-repeat;
+    background: transparent url("../img/wolves/leftTop.png") center center no-repeat;
     background-size: cover;
 
   }
@@ -24,10 +24,10 @@
     width: 250px;
     height: 150px;
 
-    top: 164px;
+    top: 166px;
     left: 140px;
   
-    background: transparent url("../img/wolf/wolfLeftBottom.png") center center
+    background: transparent url("../img/wolves/leftBottom.png") center center
       no-repeat;
     background-size: cover;
 
@@ -41,7 +41,7 @@
     top: 166px;
     right: 140px;
 
-    background: transparent url("../img/wolf/wolfRightBottom.png") center center
+    background: transparent url("../img/wolves/rightBottom.png") center center
       no-repeat;
     background-size: cover;
 
@@ -52,10 +52,10 @@
     width: 250px;
     height: 150px;
 
-    top: 166px;
+    top: 159px;
     right: 140px;
   
-    background: transparent url("../img/wolf/wolfRightTop.png") center center
+    background: transparent url("../img/wolves/rightTop.png") center center
       no-repeat;
     background-size: cover;
     
