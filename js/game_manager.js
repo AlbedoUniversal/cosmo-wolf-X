@@ -126,6 +126,7 @@ GameManager.prototype.suspendGear = function () {
 GameManager.prototype.haltGear = function () {
   clearInterval(this.gameTimer);
   this.over = true;
+	
 };
 
 GameManager.prototype.upLevel = function () {
@@ -209,6 +210,7 @@ GameManager.prototype.runEgg = function (chicken) {
 GameManager.prototype.gameOver = function () {
   this.haltGear();
   this.HTMLredraw.gameOver();
+	
 };
 
 GameManager.prototype.gameWin = function () {
