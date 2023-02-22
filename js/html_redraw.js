@@ -63,9 +63,9 @@ HTMLredraw.prototype.getMessage = function (message) {
     var elem = document.createElement(tag);
     // elem.innerHTML = data[tag];
   }
-  elem.innerHTML = `<img onclick='window.location.reload()' src="./img/gameOver.png" alt="picture">`;
+  elem.innerHTML = `<img onclick='window.location.reload()' src="./img/game-over.png" alt="picture" class="game-over"> <img onclick='window.location.reload()' src="./img/playAgain.svg" alt="picture" class="play-again">`;
   wrap.appendChild(elem);
-
+	console.log(elem);
   return wrap;
 };
 

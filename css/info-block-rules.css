@@ -46,11 +46,11 @@
 }
   
 #message > div {
-    width: 60%;
+    width: 355px;
 
     position: relative;
 
-    margin-top: 134px;
+    margin-top: 120px;
     padding: 20px;
     margin-inline: auto;
     
@@ -58,5 +58,17 @@
   
 #message > div p {
     font-size: 16px;
+}
 
+.play-again {
+	cursor: pointer;
+	margin-top: -18px;
+	transition: transform 0.5s;
+	transform: scale(0.9);
+	z-index: 2;
+}
+
+.play-again:hover {
+	transform: scale(1);
+	transition: transform 0.5s;
 }

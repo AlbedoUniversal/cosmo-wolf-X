@@ -97,32 +97,44 @@
 }
   
 #game-wrap #loss {
-  width: 120px;
-  height: 32px;
+  width: 70px;
+  height: 20px;
 
-  background: transparent url("../img/loss/loss.png") left top no-repeat;
+  background: transparent url("../img/hearts.png") left no-repeat;
   background-size: cover;
+	margin: 3px 5px;
 
-  position: absolute;
+	position: relative;
+}
+.loss-wrap {
+	background-color: #1A1E24;
+	border-radius: 30px;
+	width: 81px;
+	height: 25px;
+	position: absolute;
 
-  top: 70px;
-  left: 226px;
+  top: 72px;
+  left: 245px;
 
 }
 
 #game-wrap[data-loss="0"] #loss {
-  width: 120px;
+  width: 70px;
 
 }
 
 #game-wrap[data-loss="1"] #loss {
-  width: 80px;
-
+  width: 47px;
+	height: 22px;
+	bottom: 1px;
+	left: 0.5px;
 }
 
 #game-wrap[data-loss="2"] #loss {
-  width: 40px;
-
+  width: 23px;
+	height: 22px;
+	bottom: 1px;
+	left:0.5px;
 }
 
 #game-wrap[data-loss="3"] #loss {
