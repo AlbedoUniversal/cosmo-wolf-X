@@ -3,15 +3,15 @@
 #game-wrap #score {
   position: absolute;
 
-  top: 16px;
-  left: 235px;
+  top: 21px;
+  left: 256px;
 
 }
 
 #game-wrap #score ul {
   margin: 0;
   padding: 0;
-
+	
   list-style: none;
 
   display: inline-block;
@@ -19,10 +19,10 @@
 }
 
 #game-wrap #score ul > li {
-  width: 31px;
-  height: 45px;
+  width: 20.4px;
+  height: 30px;
 
-  margin: 0 0 0 -6px;
+  margin: 0 0 0 0;
   
   display: inline-block;
 
@@ -34,10 +34,10 @@
   width: 100%;
   height: 100%;
 
-  background: transparent url("../img/score/nums.png");
+  background: transparent url("../img/score/nums-new-size.png");
   background-position: 0px 0px;
 
-  text-indent: -200px;
+  text-indent: -100px;
 
   display: block;
   overflow: hidden;
@@ -51,48 +51,48 @@
 }
 
 #game-wrap #score ul > li.n-1 span {
-  background-position: -31px 0px;
+  background-position: -19.83px 0px;
 
 }
 
 #game-wrap #score ul > li.n-2 span {
-  background-position: -62px 0px;
+  background-position: -39.5px 0px;
 
 }
 
 #game-wrap #score ul > li.n-3 span {
-  background-position: -93px 0px;
+  background-position: -59px 0px;
 
 }
 
 #game-wrap #score ul > li.n-4 span {
-  background-position: -124px 0px;
+  background-position: -79px 0px;
 
 }
 
 #game-wrap #score ul > li.n-5 span {
-  background-position: -155px 0px;
+  background-position: -98.8px 0px;
 
 }
 
   
 #game-wrap #score ul > li.n-6 span {
-  background-position: -186px 0px;
+  background-position: -118px 0px;
 
 }
 
 #game-wrap #score ul > li.n-7 span {
-  background-position: -217px 0px;
+  background-position: -138px 0px;
 
 }
 
 #game-wrap #score ul > li.n-8 span {
-  background-position: -248px 0px;
+  background-position: -157.9px 0px;
 
 }
 
 #game-wrap #score ul > li.n-9 span {
-  background-position: -279px 0px;
+  background-position: -178px 0px;
 
 }
   

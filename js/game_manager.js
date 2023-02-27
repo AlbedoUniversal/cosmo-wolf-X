@@ -17,7 +17,7 @@ GameManager.prototype.init = function () {
   this.speed = 800;
   // this.maxSpeed = 200;
   this.interval = this.speed * 2.5;
-  this.point = 2;
+  this.point = 1;
 
   this.chickens = {};
   this.eggs = {};
