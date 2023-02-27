@@ -63,7 +63,7 @@ HTMLredraw.prototype.getMessage = function (message) {
     var elem = document.createElement(tag);
     // elem.innerHTML = data[tag];
   }
-  elem.innerHTML = `<img onclick='window.location.reload()' src="./img/game-over.png" alt="picture" class="game-over"> <img onclick='window.location.reload()' src="./img/playAgain.svg" alt="picture" class="play-again">`;
+  elem.innerHTML = `<div onclick='window.location.reload()' class="game-over"></div> <img onclick='window.location.reload()' src="./img/playAgain.svg" alt="picture" class="play-again">`;
   wrap.appendChild(elem);
   return wrap;
 };

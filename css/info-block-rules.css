@@ -25,11 +25,24 @@
     bottom: 10px;
 
     padding-bottom: 44px;
+}
 
-    background: transparent url("../img/arrow-keys.png") center bottom no-repeat;
+#game-wrap .more-info .arrays {
+	background-image: url("../img/arrow-keys.png");
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 62px;
+	height: 40px;
+}
+
+@media (-webkit-min-device-pixel-ration: 2),
+(min-resolution: 192dpi) {
+	#game-wrap .more-info .arrays {
+		background-image: url("../img/arrow-keys-retina.png");
+}
 
 }
-  
 #message {
     width: 100%;
     height: 100%;

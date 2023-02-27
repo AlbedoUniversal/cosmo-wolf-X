@@ -84,9 +84,7 @@ body:not(.is-mobile) .more-info a.restart-game {
 
   }
   
-
-  
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait){
     .mobile-popup-orientation {
       display: inline-flex;
       position: fixed;
@@ -124,6 +122,8 @@ body:not(.is-mobile) .more-info a.restart-game {
 		
 		.phone-rotate {
 
+			height: 40px;
+			width: 40px;
 			animation-name: shaking;
       animation-duration: 2s;
       animation-iteration-count: infinite;
