@@ -173,7 +173,7 @@ GameManager.prototype.updateScore = function (data) {
 		
 		
 		basket.style.display = 'block';
-		setTimeout(() => basket.style.display = 'none', 800);
+		setTimeout(() => basket.style.display = 'none', 400);
 	
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });

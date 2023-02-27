@@ -63,7 +63,7 @@
   -o-transform: rotate(-93deg);
   -ms-transform: rotate(-93deg);
   transform: rotate(-93deg);
-
+	
 }
 
 #game-wrap[data-egg-0="5"] .egg.e-0 {
@@ -76,9 +76,9 @@
   -ms-transform: rotate(-7deg);
   transform: rotate(-7deg);
 	transition: 1.2s;
-	transform: scale(0.4);
+	transform: scale(0.2);
   opacity: 0;
-
+	transform: translateX(25px);
 }
   
   /* Egg top-left */
@@ -133,8 +133,9 @@
   top: 160px;
   left: 110px;
 	transition: 1.2s;
-	transform: scale(0.4);
+	transform: scale(0.2);
   opacity: 0;
+	transform: translateX(25px);
 }
   
   /* Egg top-right */
@@ -196,9 +197,9 @@
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
 	transition: 1.2s;
-	transform: scale(0.4);
+	transform: scale(0.2);
   opacity: 0;
-
+	transform: translateX(-25px);
 }
   
   /* Egg bottom-right */
@@ -260,8 +261,8 @@
   -ms-transform: rotate(68deg);
   transform: rotate(68deg);
 	transition: 1.2s;
-	transform: scale(0.4);
+	transform: scale(0.2);
   opacity: 0;
-    
+	transform: translateX(-25px);
 }
 
