@@ -39,7 +39,7 @@
 @media (-webkit-min-device-pixel-ration: 2),
 (min-resolution: 192dpi) {
 	#game-wrap .more-info .arrays {
-		background-image: url("../img/arrow-keys-retina.png");
+		background-image: url("../img/arrow-keys-retina.svg");
 }
 
 }
