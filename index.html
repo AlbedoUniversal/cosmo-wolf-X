@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Catch the Egg | Ну, погоди!</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-</head>
-<body>
-  <div class="page">
-    <a href="#" class="logo">Catch The Egg</a>
-    <div id="game-wrap" data-bx="0" data-by="1" data-egg-0="0" data-egg-1="0" data-egg-2="0" data-egg-3="0" data-loss="0">
-
-      <div class="basket"></div>
-      <div class="wolf"></div>
-      <div class="egg e-0"></div>
-      <div class="egg e-1"></div>
-      <div class="egg e-2"></div>
-      <div class="egg e-3"></div>
-
-      <div id="score">
-        <ul>
-          <li><span>0</span></li>
-          <li><span>0</span></li>
-          <li><span>0</span></li>
-          <li><span>0</span></li>
-        </ul>
+  <head>
+    <meta charset="utf-8" />
+    <title>Catch the tech | X - wolf!</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+  </head>
+  <body>
+    <div class="mobile-popup-orientation">
+			<div class="phone-rotate-wrap">
+				<img class="phone-rotate" src="./img/screen-rotation-retina.png" alt="screen rotation">
+      	<p class="text-mobile-alert">Переверните телефон</p>
+			</div>
+    </div>
+    
+    <div class="page">
+      <div
+        id="game-wrap"
+        data-bx="0"
+        data-by="1"
+        data-egg-0="0"
+        data-egg-1="0"
+        data-egg-2="0"
+        data-egg-3="0"
+        data-loss="0"
+      >
+      <div class="btn-start-wrapper">
+        <button class="btn-start"></button>
       </div>
+        <div class="basket">
+          <img class="basket-plasma" src="./img/basket/blasterShot.gif" alt="Blaster shot basket-plasma"/>
+        </div>
+        <div class="wolf"></div>
+        <div class="egg e-0">
+          <img
+            class="egg-img"
+            width="30px"
+            height="30px"
+            src="./img/egg-new/PHONE.png"
+            alt="phone"
+          />
+        </div>
+        <div class="egg e-1">
+          <img
+            class="egg-img"
+            width="40px"
+            height="30px"
+            src="./img/egg-new/LAPTOP.png"
+            alt="laptop"
+          />
+        </div>
+        <div class="egg e-2">
+          <img
+            class="egg-img"
+            width="30px"
+            height="30px"
+            src="./img/egg-new/TECHNO.png"
+            alt="techno"
+          />
+        </div>
+        <div class="egg e-3">
+          <img
+            class="egg-img"
+            width="30px"
+            height="30px"
+            src="./img/egg-new/TABLET.png"
+            alt="tablet"
+          />
+        </div>
 
-      <div id="loss"></div>
+        <div id="score">
+          <ul>
+            <li><span>0</span></li>
+            <li><span>0</span></li>
+            <li><span>0</span></li>
+            <li><span>0</span></li>
+          </ul>
+        </div>
+				<div class="loss-wrap">
+        	<div id="loss"></div>
+				</div>
+        <div id="message"></div>
 
-      <div id="message"></div>
+        <div class="lost-egg"></div>
+  
 
-      <div class="more-info">
-        <div class="how-to-play">How to play</div>
-        <a href="/catch-the-egg/" class="restart-game">Restart</a>
+        <div class="more-info">
+          <div class="how-to-play">Управление</div>
+					<div class="arrays"></div>
+          <!-- <a href="/catch-the-egg/" class="restart-game">Restart</a> -->
+        </div>
+
+        <div id="controls">
+          <a href="#top-left" data-x="0" data-y="1">
+            <img class="nav-img" src="./img/ButtonLeft.png" alt="button to top-left"/>
+          </a>
+          <a href="#bottom-left" data-x="0" data-y="0">
+            <img class="nav-img" src="./img/ButtonLeft.png" alt="button to bottom-left"/>
+          </a>
+          <a href="#top-right" data-x="1" data-y="1">
+            <img class="nav-img" src="./img/ButtonRight.png" alt="button to top-right"/>
+          </a>
+          <a href="#bottom-right" data-x="1" data-y="0">
+            <img class="nav-img" src="./img/ButtonRight.png" alt="button to bottom-right"/>
+          </a>
+        </div>
       </div>
-
-      <div id="controls">
-        <a href="#top-left" data-x="0" data-y="1">Q</a>
-        <a href="#bottom-left" data-x="0" data-y="0">A</a>
-        <a href="#top-right" data-x="1" data-y="1">E</a>
-        <a href="#bottom-right" data-x="1" data-y="0">D</a>
-      </div>
-
-
-
     </div>
 
-  </div>
+    <div class="footer"></div>
 
-
-
-  <div class="footer">
-  </div>
-
-  <script src="js/comfy.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/game_components.js"></script>
-  <script src="js/html_redraw.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/app.js"></script>
-
-</body>
+    <script src="js/comfy.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/game_components.js"></script>
+    <script src="js/html_redraw.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

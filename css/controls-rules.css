@@ -1,0 +1,54 @@
+#controls {
+    width: 100%;
+    height: 155px;
+  
+    position: absolute;
+    bottom: 100px;
+  
+}
+  
+#controls a {
+    width: 80px;
+    height: 80px;
+  
+    border-radius: 80px;
+    
+    color: var(--controls-a-color);
+    font-size: 16px;
+    line-height: 32px;
+    text-indent: -200px;
+    text-align: center;
+  
+    position: absolute;
+    overflow: hidden;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#controls a .nav-img {
+    width: 110px;
+    height: 80px;
+  
+}
+  
+#controls a[data-x="0"] {
+    left: -80px;
+  
+}
+  
+#controls a[data-x="1"] {
+    right: -80px;
+  
+}
+  
+#controls a[data-y="0"] {
+    bottom: 0;
+  
+}
+  
+#controls a[data-y="1"] {
+    top: 0;
+
+}

@@ -1,0 +1,87 @@
+#game-wrap .more-info {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    
+    position: absolute;
+    top: auto;
+    right: 0;
+
+    bottom: -110px;
+    
+}
+  
+#game-wrap .more-info a.restart-game {
+    padding-left: 20px;
+    background: transparent url("../img/restart-icon.png") left center no-repeat;
+
+}
+
+#game-wrap .more-info .how-to-play {
+    position: absolute;
+    bottom: 10px;
+
+    padding-bottom: 44px;
+}
+
+#game-wrap .more-info .arrays {
+	background-image: url("../img/arrow-keys.png");
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 62px;
+	height: 40px;
+}
+
+@media (-webkit-min-device-pixel-ration: 2),
+(min-resolution: 192dpi) {
+	#game-wrap .more-info .arrays {
+		background-image: url("../img/arrow-keys-retina.png");
+}
+
+}
+#message {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    
+    background: transparent url("../img/game-over-bg.png");
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    display: none;
+
+}
+  
+#message > div {
+    width: 355px;
+
+    position: relative;
+
+    margin-top: 120px;
+    padding: 20px;
+    margin-inline: auto;
+    
+}
+  
+#message > div p {
+    font-size: 16px;
+}
+
+.play-again {
+	cursor: pointer;
+	margin-top: -18px;
+	transition: transform 0.5s;
+	transform: scale(0.9);
+	z-index: 2;
+}
+
+.play-again:hover {
+	transform: scale(1);
+	transition: transform 0.5s;
+}
