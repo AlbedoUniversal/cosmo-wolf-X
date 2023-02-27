@@ -75,7 +75,7 @@ GameManager.prototype.isMobile = function () {
 
 GameManager.prototype.move = function (data) {
   var position = { x: this.basket.x, y: this.basket.y };
-
+	
   switch (data.type) {
     case "arrow":
       // 0: up, 1: right, 2: down, 3: left, 4: R - restart
@@ -160,7 +160,7 @@ GameManager.prototype.updateScore = function (data) {
       return false;
     }
 
-    
+
 
     if (!(this.score % 50)) {
       this.upLevel();
@@ -168,7 +168,7 @@ GameManager.prototype.updateScore = function (data) {
   } else {
     this.loss++;
     this.HTMLredraw.updateLossCount({ loss: this.loss });
-
+		
 
     // add fragments when egg is lost
 
@@ -186,7 +186,7 @@ GameManager.prototype.updateScore = function (data) {
       this.gameOver();
     }
   }
-
+	
 };
 
 GameManager.prototype.findAvailableChicken = function () {

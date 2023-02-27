@@ -3,23 +3,23 @@
 #game-wrap .basket {
   width: 80px;
   height: 80px;
-
+	
   position: absolute;
-
+	
 }
 
 
 #game-wrap[data-bx="0"][data-by="1"] .basket {
   width: 82px;
   height: 78px;
-
+	
   background: none;
 
   top: 158px;
-  left: 80px;
+  left: 87px;
 
 }
-  
+
 /* //rt */
 #game-wrap[data-bx="1"][data-by="1"] .basket {
   width: 82px;
@@ -27,8 +27,8 @@
 
   background: none;
   
-  top: 168px;
-  right: 87px;
+  top: 158px;
+  right: 83px;
 
 }
 
@@ -38,7 +38,7 @@
 
   background: none;
   
-  left: 80px;
+  left: 87px;
   bottom: 54px;
 
 }
@@ -50,7 +50,7 @@
 
   background: none;
   
-  right: 76px;
+  right: 83px;
   bottom: 54px;
 
 }
