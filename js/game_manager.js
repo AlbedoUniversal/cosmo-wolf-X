@@ -2,6 +2,7 @@ var GameManager = function () {
   this.init();
   this.setup();
   // this.start();
+	
 };
 
 // Initial game settings
@@ -26,17 +27,22 @@ GameManager.prototype.init = function () {
   this.basketStartPosition = { x: 0, y: 1 };
 };
 
+
+GameManager.prototype.setFirstComing = function () {
+
+return sessionStorage.setItem("start", true);
+
+}
 // Set up the game
 GameManager.prototype.setup = function () {
 
   // start game press button
   const btnStart = document.querySelector('.btn-start');
-  const btnStartWrap = document.querySelector('.btn-start-wrapper');
-
-  btnStart.onclick = () => {
+	const btnStartWrap = document.querySelector('.btn-start-wrapper');
+	btnStart.onclick = () => {
     btnStartWrap.hide();
     this.start();
-    
+    this.setFirstComing();
   }
   
   // start game press enter
@@ -44,8 +50,17 @@ GameManager.prototype.setup = function () {
     if( event.code === 'Enter' ) {
       btnStartWrap.hide();
       this.start();
+			this.setFirstComing();
     }
   });
+	btnStartWrap.style.opacity = "1";
+
+	if(sessionStorage.getItem('start')) {
+		btnStartWrap.style.opacity = "0";
+		this.start();
+	}
+
+  
 
   this.keyboard = new KeyboardInputManager();
   this.keyboard.on("move", this.move.bind(this));
