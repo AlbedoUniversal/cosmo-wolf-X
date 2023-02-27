@@ -3,7 +3,7 @@ function HTMLredraw() {
   this.gameWrap = document.querySelector("#game-wrap");
   this.scoreWrap = document.querySelector("#score");
   this.messageWrap = document.querySelector("#message");
-  this.scoreNums = 4;
+  this.scoreNums = 3;
 }
 
 HTMLredraw.prototype.updateEggPosition = function (data) {
