@@ -163,10 +163,18 @@ GameManager.prototype.upLevel = function () {
 };
 
 GameManager.prototype.updateScore = function (data) {
+	const basket = document.querySelector('.basket');
+
   if (
     this.grid.list[data.egg].x == this.basket.x &&
     this.grid.list[data.egg].y == this.basket.y
   ) {
+
+		
+		
+		basket.style.display = 'block';
+		setTimeout(() => basket.style.display = 'none', 800);
+	
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
     
