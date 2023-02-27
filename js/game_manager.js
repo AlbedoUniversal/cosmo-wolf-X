@@ -14,7 +14,7 @@ GameManager.prototype.init = function () {
 
   this.count = 4;
   this.level = 1;
-  this.speed = 800;
+  this.speed = 600;
   // this.maxSpeed = 200;
   this.interval = this.speed * 2.5;
   this.point = 1;
@@ -173,7 +173,7 @@ GameManager.prototype.updateScore = function (data) {
 		
 		
 		basket.style.display = 'block';
-		setTimeout(() => basket.style.display = 'none', 400);
+		setTimeout(() => basket.style.display = 'none', 200);
 	
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
