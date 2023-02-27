@@ -44,7 +44,7 @@ GameManager.prototype.setup = function () {
     this.start();
     this.setFirstComing();
   }
-  
+
   // start game press enter
   document.addEventListener( 'keyup', event => {
     if( event.code === 'Enter' ) {
