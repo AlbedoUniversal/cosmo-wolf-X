@@ -269,6 +269,13 @@
   animation-duration: 0.3s;
 }
 
+@media (-webkit-min-device-pixel-ration: 2),
+(min-resolution: 192dpi) {
+	.lost-egg {
+		background-image: url("../img/fragments-retina.png");
+	}
+}
+
 @keyframes flashes {
   from {
     opacity: 0;
