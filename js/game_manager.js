@@ -207,6 +207,15 @@ GameManager.prototype.runEgg = function (chicken) {
 };
 
 GameManager.prototype.gameOver = function () {
+	document.querySelectorAll('.egg').forEach((el) => {
+		el.style.display = 'none'
+	});
+
+	document.querySelector('.wolf').style.opacity = 0;
+  this.haltGear();
+  this.HTMLredraw.gameOver();
+
+	document.querySelector('.basket').style.opacity = 0;
   this.haltGear();
   this.HTMLredraw.gameOver();
 };
