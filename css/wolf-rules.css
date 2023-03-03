@@ -1,7 +1,7 @@
 #game-wrap .wolf {
     width: 50px;
     height: 140px;
-
+		border: 0;
     position: absolute;
 
   }

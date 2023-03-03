@@ -53,10 +53,10 @@ GameManager.prototype.setup = function () {
 			this.setFirstComing();
     }
   });
-	btnStartWrap.style.opacity = "1";
+	btnStartWrap.style.display = "block";
 
 	if(sessionStorage.getItem('start')) {
-		btnStartWrap.style.opacity = "0";
+		btnStartWrap.style.display = "none";
 		this.start();
 	}
 
@@ -170,10 +170,8 @@ GameManager.prototype.updateScore = function (data) {
     this.grid.list[data.egg].y == this.basket.y
   ) {
 
-		
-		
-		basket.style.display = 'block';
-		setTimeout(() => basket.style.display = 'none', 200);
+		// basket.style.display = 'block';
+		// setTimeout(() => basket.style.display = 'none', 200);
 	
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
