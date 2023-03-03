@@ -145,7 +145,7 @@ GameManager.prototype.haltGear = function () {
 
 GameManager.prototype.upLevel = function () {
   this.level++;
-	console.log(this.level)
+
   switch (true) {
     case this.level < 5:
       this.speed += -50;
@@ -164,14 +164,14 @@ GameManager.prototype.upLevel = function () {
 
 GameManager.prototype.updateScore = function (data) {
 	const basket = document.querySelector('.basket');
-	console.log(this.speed);
+	
   if (
     this.grid.list[data.egg].x == this.basket.x &&
     this.grid.list[data.egg].y == this.basket.y
   ) {
 
-		// basket.style.display = 'block';
-		// setTimeout(() => basket.style.display = 'none', 200);
+		basket.style.display = 'block';
+		setTimeout(() => basket.style.display = 'none', 200);
 	
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
@@ -185,7 +185,7 @@ GameManager.prototype.updateScore = function (data) {
 
     if (!(this.score % 10)) {
       this.upLevel();
-			console.log(this.level)
+			
     }
   } else {
     this.loss++;

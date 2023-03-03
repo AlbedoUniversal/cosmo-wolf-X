@@ -47,6 +47,8 @@ function Chicken(key, position) {
   this.x = position.x;
   this.y = position.y;
 
+
+
   this.egg = new Egg(this.key, 0);
 }
 
@@ -74,10 +76,11 @@ Egg.prototype.run = function(speed, callback) {
 
 Egg.prototype.nextStep = function() {
   ++this.step;
-
+	
   this.callback('updateEggPosition', { egg: this.chicken, position: this.step });
 
   if (this.step > this.amount) {
+		
     clearInterval(this.timer);
     this.step = 0;
     this.callback('updateEggPosition', { egg: this.chicken, position: 0 });
