@@ -102,7 +102,7 @@
 
   background: transparent url("../img/hearts.png") left no-repeat;
   background-size: cover;
-	margin: 3px 5px;
+	margin: 2px 4px 3px 5px;
 
 	position: relative;
 }
@@ -122,8 +122,8 @@
 	height: 25px;
 	position: absolute;
 
-  bottom: 19px;
-  right: 19px;
+  bottom: 21px;
+  right: 26px;
 
 }
 
@@ -133,17 +133,17 @@
 }
 
 #game-wrap[data-loss="1"] #loss {
-  width: 47px;
-	height: 22px;
-	bottom: 1px;
-	left: 0.5px;
+  width: 45px;
+	height: 20px;
+	
+	
 }
 
 #game-wrap[data-loss="2"] #loss {
-  width: 23px;
-	height: 22px;
-	bottom: 1px;
-	left:0.5px;
+  width: 20px;
+	height: 20px;
+	
+	
 }
 
 #game-wrap[data-loss="3"] #loss {

@@ -14,7 +14,7 @@ GameManager.prototype.init = function () {
 
   this.count = 4;
   this.level = 1;
-  this.speed = 800;
+  this.speed = 650;
   // this.maxSpeed = 200;
   this.interval = this.speed * 2.5;
   this.point = 1;
@@ -176,14 +176,14 @@ GameManager.prototype.updateScore = function (data) {
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
     
-    if (this.score >= 1000) {
+    if (this.score >= 999) {
       this.gameWin();
       return false;
     }
 
 
 
-    if (!(this.score % 10)) {
+    if (!(this.score % 5)) {
       this.upLevel();
 			
     }
