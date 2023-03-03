@@ -1,5 +1,7 @@
 /* Mobile devices */
-
+body.is-mobile {
+	background-color: black;
+}
 body.is-mobile .page a.logo {
     margin-top: 5%;
 
