@@ -14,7 +14,7 @@ GameManager.prototype.init = function () {
 
   this.count = 4;
   this.level = 1;
-  this.speed = 600;
+  this.speed = 800;
   // this.maxSpeed = 200;
   this.interval = this.speed * 2.5;
   this.point = 1;
@@ -53,7 +53,7 @@ GameManager.prototype.setup = function () {
 			this.setFirstComing();
     }
   });
-	btnStartWrap.style.display = "block";
+	btnStartWrap.style.display = "block"
 
 	if(sessionStorage.getItem('start')) {
 		btnStartWrap.style.display = "none";
@@ -145,9 +145,9 @@ GameManager.prototype.haltGear = function () {
 
 GameManager.prototype.upLevel = function () {
   this.level++;
-
+	console.log(this.level)
   switch (true) {
-    case this.level < 8:
+    case this.level < 5:
       this.speed += -50;
       break;
     case this.level > 19:
@@ -164,7 +164,7 @@ GameManager.prototype.upLevel = function () {
 
 GameManager.prototype.updateScore = function (data) {
 	const basket = document.querySelector('.basket');
-
+	console.log(this.speed);
   if (
     this.grid.list[data.egg].x == this.basket.x &&
     this.grid.list[data.egg].y == this.basket.y
@@ -183,8 +183,9 @@ GameManager.prototype.updateScore = function (data) {
 
 
 
-    if (!(this.score % 50)) {
+    if (!(this.score % 10)) {
       this.upLevel();
+			console.log(this.level)
     }
   } else {
     this.loss++;
